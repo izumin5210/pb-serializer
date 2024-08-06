@@ -20,7 +20,7 @@ module Pb
       # @raise [Pb::Serializer::UnknownFieldError] if the field does not defined in .proto
       # @raise [Pb::Serializer::InvalidAttributeOptionError] if unknown options are passed
       def attribute(name, opts = {})
-        raise ::Pb::Serializer::MissingMessageTypeError, "message specificaiton is missed" unless __pb_serializer_message_class
+        raise ::Pb::Serializer::MissingMessageTypeError, "message specification is missed" unless __pb_serializer_message_class
 
         fd = __pb_serializer_message_class.descriptor.find { |fd| fd.name.to_sym == name }
 

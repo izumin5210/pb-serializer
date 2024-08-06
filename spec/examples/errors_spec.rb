@@ -17,7 +17,7 @@ RSpec.describe 'errors' do
     }.to raise_error Pb::Serializer::InvalidAttributeOptionError
   end
 
-  it 'raises an error when unknown fied is declared' do
+  it 'raises an error when unknown field is declared' do
     expect {
       Class.new(Pb::Serializer::Base) do
         message TestFixture::Simple::Message

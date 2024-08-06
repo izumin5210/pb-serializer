@@ -44,7 +44,7 @@ module Pb
     class << self
       # @example
       #   Pb::Serializer.configuration do |c|
-      #     c.missing_field_behavior = :raise  # :raise, :warn or :ignore (defualt: :raise)
+      #     c.missing_field_behavior = :raise  # :raise, :warn or :ignore (default: :raise)
       #   end
       # @yield [c]
       # @yieldparam [Configuration] config
@@ -55,7 +55,7 @@ module Pb
 
       # @return [Pb::Serializer::Configuration]
       def configuration
-        @configuraiton ||= Configuration.new
+        @configuration ||= Configuration.new
       end
 
       # @return [Logger]
